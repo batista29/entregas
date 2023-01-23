@@ -1,0 +1,34 @@
+body {
+    background-color: gray;
+}
+
+.cabecalho {
+    height: 10vh;
+    width: 100vw;
+    background-color: white;
+    margin:10px 20px 30px 20px;
+    border-radius: 20px;
+}
+
+.container {
+    height: 90vh;
+    width: 100vw;
+    margin:10px 20px 30px 20px;
+}
+
+.endereco {
+    height: 40%;
+    width: 100%;
+    background-color: white;
+    margin-bottom:30px;
+}
+
+.detalhes {
+    height: 60%;
+    width: 100%;
+    background-color: white;    
+}
+
+.titulo h1{
+    margin: auto;
+}
