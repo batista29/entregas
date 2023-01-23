@@ -14,7 +14,7 @@ create table pedidos(
     id_pedido integer AUTO_INCREMENT not null primary key,
     cliente varchar (20) not null,
     endereco varchar (30) not null,
-    Produto varchar (30) not null,
+    produto varchar (30) not null,
     data date not null,
     hora_pedido time not null,
     hora_entrega time,
