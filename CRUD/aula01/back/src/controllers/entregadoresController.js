@@ -21,7 +21,18 @@ function cadastrarEntregadores(req, res) {
     });
 };
 
+function loginUser (req, res) {
+    con.query(Entregadores.toLogin(), (err, result) => {
+        if(err == null) {
+            res.status(201).json(result).end()
+        }else{
+            res.status(404).json(err).end();
+        }
+    })
+}
+
 module.exports = {
     listarEntregadores,
-    cadastrarEntregadores
+    cadastrarEntregadores,
+    loginUser
 }

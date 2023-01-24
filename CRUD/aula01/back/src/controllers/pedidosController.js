@@ -21,7 +21,32 @@ function cadastrarPedidos(req, res) {
     });
 };
 
+
+function excluirCategoria (req, res) {
+    con.query(Pedidos.toDel(req.body), (err, result) => {
+        if (err == null) {
+            res.status(200).json(req.body).end();
+        } else {
+            res.status(400).json(err).end();
+        }
+    });
+}
+
+function updatePublicacao (req, res) {
+    con.query(Pedidos.toUpdate(req.body), (err, result) => {
+        if (err == null)
+            if (result.affectedRows > 0)
+                res.status(200).end();
+            else
+                res.status(404).end();
+        else
+            res.status(400).json(err).end();
+    });
+}
+
 module.exports = {
     listarPedidos,
-    cadastrarPedidos
+    cadastrarPedidos,
+    excluirCategoria,
+    updatePublicacao
 }

@@ -37,15 +37,17 @@ ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
-drop view if exists vw_entregador;
-create view vw_entregador AS 
-SELECT e.nome,p.id_pedido,p.cliente,p.produto,p.endereco,p.data, p.hora_pedido, p.hora_entrega
-FROM entregadores e INNER JOIN pedidos p on e.id_entregador = p.id_entregador;
 
-drop view if exists vw_cozinha;
-create view vw_cozinha AS 
-SELECT p.id_pedido,p.cliente,p.produto,p.endereco,p.data, p.hora_pedido
-FROM entregadores e INNER JOIN pedidos p on e.id_entregador = p.id_entregador;
+
+
+
+-- drop view if exists vw_cozinha;
+-- create view vw_cozinha AS 
+-- SELECT p.id_pedido,p.cliente,p.produto,p.endereco,p.data, p.hora_pedido
+-- FROM entregadores e INNER JOIN pedidos p on e.id_entregador = p.id_entregador;
+
+
+
 
 
 -- Listar pedidos em execução, com os campos hora_entrega e hora_fim em branco ou nulo ou hora 0:00 PEDIDOS EM EXECUCAO
@@ -60,4 +62,4 @@ WHERE p.hora_entrega = "00:00:00" or p.hora_entrega = null;
 drop view if exists vw_pedidos_entregador;
 create view vw_pedidos_entregador AS 
 SELECT e.id_entregador, e.nome, p.hora_pedido, p.hora_entrega, p.hora_fim
-FROM entregadores e INNER JOIN pedidos p WHERE e.nome = "Jair" AND p.hora_fim = "00:00:00";
+FROM entregadores e INNER JOIN pedidos p WHERE e.nome = "nomeEntregador" AND p.hora_fim = "00:00:00";
