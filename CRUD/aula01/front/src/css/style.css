@@ -1,34 +1,92 @@
 body {
-    background-color: gray;
+    background-color: rgb(229, 229, 229);
 }
 
 .cabecalho {
     height: 10vh;
-    width: 100vw;
     background-color: white;
-    margin:10px 20px 30px 20px;
-    border-radius: 20px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 7px 0 7px;
+    border: 1px solid rgb(182, 182, 182);
 }
 
-.container {
-    height: 90vh;
-    width: 100vw;
-    margin:10px 20px 30px 20px;
+.pedidos {
+    height: 85vh;
+    margin: 7px;
 }
 
-.endereco {
-    height: 40%;
-    width: 100%;
+.gerarPedido {
+    height: 32%;
     background-color: white;
-    margin-bottom:30px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 7px;
+    display: flex;
 }
 
-.detalhes {
-    height: 60%;
-    width: 100%;
-    background-color: white;    
+
+.pedido {
+    width: 30vw;
+    margin: 15px;
 }
 
-.titulo h1{
-    margin: auto;
+.pedido p {
+    margin-bottom: 15px;
+}
+
+.pedido button {
+    height: 35px;
+    width: 70%;
+}
+
+.infoPedido {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    margin: 15px 0;
+}
+
+.infoPedido input,
+select {
+    height: 30px;
+    width: 98%;
+    margin: 3px;
+}
+
+.infoEntrega {
+    height: 68%;
+    background-color: white;
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 7px;
+    display: flex;
+}
+
+.execucao {
+    width: 50vw;
+    margin: 20px;
+}
+
+.exe {
+    display: flex;
+}
+
+.exe p {
+    margin-right: 3px;
+}
+
+
+.caminho {
+    width: 50vw;
+    margin: 20px;
+}
+
+.cam {
+    display: flex;
+}
+
+.cam p {
+    margin-right: 3px;
 }

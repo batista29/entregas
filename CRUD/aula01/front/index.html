@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,19 +9,61 @@
     <link rel="stylesheet" href="src/css/reset.css">
     <link rel="stylesheet" href="src/css/style.css">
 </head>
+
 <body>
     <header class="cabecalho">
-        <div class="titulo">
-            <h1>gestão de entregas</h1>
-        </div>
+        <h1>gestão de entregas</h1>
     </header>
-    <main class="container">
-        <div class="endereco">
-
-        </div>
-        <div class="detalhes">
-
-        </div>
+    <main>
+        <section class="pedidos">
+            <div class="gerarPedido">
+                <div class="pedido">
+                    <p>Cliente:</p>
+                    <p>Endereco:</p>
+                    <p>Produto:</p>
+                    <button>Gerar Pedido</button>
+                </div>
+                <div class="infoPedido">
+                    <input type="text">
+                    <input type="text">
+                    <select name="" id="">
+                        <option value="">puddim</option>
+                        <option value="">marmita</option>
+                    </select>
+                    <input type="text">
+                </div>
+            </div>
+            <section class="infoEntrega">
+                <section class="execucao">
+                    <h2>Em execução</h2>
+                    <div>
+                        <div class="exe">
+                            <p>id:</p>
+                            <p>cliente:</p>
+                            <p>produto:</p>
+                            <p>endereco:</p>
+                            <p>data:</p>
+                            <p>horario:</p>
+                            
+                        </div>
+                    </div>
+                </section>
+                <section class="caminho">
+                    <h2>A caminho</h2>
+                    <div>
+                        <div class="cam">
+                            <p>id:</p>
+                            <p>cliente:</p>
+                            <p>produto:</p>
+                            <p>endereco:</p>
+                            <p>data:</p>
+                            <p>horario:</p>
+                            <p>entrega:</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+        </section>
     </main>
 </body>
 </html>
