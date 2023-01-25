@@ -73,17 +73,30 @@ select {
 
 .model {
     display: none;
+    visibility: collapse;
 }
 
 .exe {
     background-color: rgb(238, 238, 238);
-    width: 50%;
+    width: 60%;
     border: 1px solid gray;
     border-radius: 10px;
+    margin: 10px;
+}
+
+.exe button {
+    height: 120px;
+    width: 70%;
+    text-align: center;
+}
+
+.exe button img{
+    height: 40px;
 }
 
 .exe p {
     margin: 10px;
+    font-size:20px ;
 }
 
 
@@ -96,12 +109,28 @@ select {
 
 .cam {
     background-color: rgb(218, 218, 218);
-    width: 50%;
+    width: 60%;
     border: 1px solid gray;
     border-radius: 10px;
     margin: 10px;
 }
 
+.teste {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.cam button {
+    height: 120px;
+    width: 80%;
+    text-align: center;
+}
+.cam button img {
+    height: 40px;
+}
+
 .cam p {
     margin: 10px;
+    font-size:20px ;
 }

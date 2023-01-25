@@ -63,7 +63,6 @@ function pedidosCaminho() {
 }
 
 function pedidos() {
-
     pedidosExecucao()
     pedidosCaminho()
 }
