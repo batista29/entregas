@@ -11,6 +11,17 @@ function listarPedidos(req, res) {
     })
 };
 
+function listarPedidos2(req, res) {
+    con.query(Pedidos.toRead(), (err, result) => {
+        if (err == null) {
+            res.json(result).status(200).end();
+        } else {
+            res.status(500).end();
+        }
+    })
+};
+
 module.exports = {
     listarPedidos,
+    listarPedidos2
 }

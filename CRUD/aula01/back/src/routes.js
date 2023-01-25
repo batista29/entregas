@@ -21,5 +21,6 @@ router.get("/vwExecucao", Execucao.listarPedidos);
 const vw_Pedidos = require("./controllers/vw_pedidos_entregador");
 
 router.get("/vw_pedidos", vw_Pedidos.listarPedidos);
+router.get("/vw_pedidos2", vw_Pedidos.listarPedidos2);
 
 module.exports = router;
