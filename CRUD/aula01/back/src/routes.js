@@ -14,4 +14,12 @@ router.post("/pedidos", PedidosController.cadastrarPedidos);
 router.delete("/pedidos", PedidosController.excluirCategoria);
 router.put("/pedidos", PedidosController.updatePublicacao);
 
+const Execucao = require("./controllers/vw_execucaoController");
+
+router.get("/vwExecucao", Execucao.listarPedidos);
+
+const vw_Pedidos = require("./controllers/vw_pedidos_entregador");
+
+router.get("/vw_pedidos", vw_Pedidos.listarPedidos);
+
 module.exports = router;
