@@ -12,8 +12,8 @@ create table entregadores(
 
 create table pedidos(
     id_pedido integer AUTO_INCREMENT not null primary key,
-    cliente varchar (20) not null,
-    endereco varchar (30) not null,
+    cliente varchar (40) not null,
+    endereco varchar (50) not null,
     produto varchar (30) not null,
     data date not null,
     hora_pedido time not null,
@@ -57,7 +57,7 @@ create view vw_execucao AS
 SELECT e.nome,p.id_pedido,p.cliente,p.endereco,p.produto,p.data, p.hora_pedido, p.hora_entrega, p.hora_fim
 FROM entregadores e INNER JOIN pedidos p
 on e.id_entregador = p.id_entregador
-WHERE p.hora_entrega = "00:00:00" or p.hora_entrega = null;
+WHERE p.hora_entrega = "00:00:00" or p.hora_entrega = null  order by p.id_pedido desc;
 
 -- PROCURAR PELO NOME DO ENTREGADOR
 drop view if exists vw_pedidos_entregador;
