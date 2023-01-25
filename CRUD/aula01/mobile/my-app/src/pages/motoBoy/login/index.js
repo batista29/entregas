@@ -28,10 +28,8 @@ export default function Login({ navigation }) {
             .then(data => {
                 console.log(data)
                 if (data[0].email !== undefined) {
-                    console.log(data.email)
                     navigation.navigate("Entregas")
                 } else {
-                    console.log(data.email)
                     alert('Erro')
                 }
             })

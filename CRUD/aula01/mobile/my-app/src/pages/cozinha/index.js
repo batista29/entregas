@@ -28,10 +28,14 @@ export default function Cozinha() {
                                 <Text style={styles.texto}>Endereço: {post.endereco}</Text>
                                 <Text style={styles.texto}>Data: {dataFormatadata}</Text>
                                 <Text style={styles.texto}>Horario: {post.hora_pedido}</Text>
-                                <Image
-                                    style={styles.img}
-                                    source={require('../../assets/check.png')}
-                                />
+                                <TouchableOpacity>
+                                    <Image
+                                        style={styles.img}
+                                        source={require('../../assets/check.png')}
+
+                                    />
+
+                                </TouchableOpacity>
                             </View>
                         )
                     })
@@ -77,8 +81,8 @@ const styles = StyleSheet.create({
         backgroundColor: "#EFEFEF",
         fontSize: '35px'
     },
-    img :{
-        height:'40px',
-        width:'40px'
+    img: {
+        height: '40px',
+        width: '40px'
     }
 })
