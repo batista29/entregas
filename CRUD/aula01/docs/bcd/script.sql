@@ -23,14 +23,14 @@ create table pedidos(
     foreign key (id_entregador) references entregadores(id_entregador) on delete cascade
 );
 
-LOAD DATA INFILE 'C:/Users/SUPORTE/Desktop/entregas/CRUD/aula01/docs/csv/entregadores.csv'
+LOAD DATA INFILE 'C:/Users/jaugu/Desktop/entregas/CRUD/aula01/docs/csv/entregadores.csv'
 INTO TABLE entregadores
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
-LOAD DATA INFILE 'C:/Users/SUPORTE/Desktop/entregas/CRUD/aula01/docs/csv/pedidosNew.csv'
+LOAD DATA INFILE 'C:/Users/jaugu/Desktop/entregas/CRUD/aula01/docs/csv/pedidosNew.csv'
 INTO TABLE pedidos
 FIELDS TERMINATED BY ';'
 ENCLOSED BY '"'
