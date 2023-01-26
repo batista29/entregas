@@ -5,7 +5,7 @@ export default function Main() {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        fetch("http://10.87.207.35:3000/pedidos")
+        fetch("http://10.87.207.35:3000/vw_pedidos2")
             .then(res => { return res.json() })
             .then(data => {
                 setPosts(data)

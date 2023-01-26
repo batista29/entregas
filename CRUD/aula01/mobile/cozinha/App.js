@@ -16,6 +16,7 @@ export default function Cozinha() {
         <ScrollView>
             <View style={styles.container}>
                 {
+
                     posts.map((post, index) => {
                         console.log(post)
                         var date = new Date(post.data)
@@ -28,14 +29,14 @@ export default function Cozinha() {
                                 <Text style={styles.texto}>Endereço: {post.endereco}</Text>
                                 <Text style={styles.texto}>Data: {dataFormatadata}</Text>
                                 <Text style={styles.texto}>Horario: {post.hora_pedido}</Text>
-                                <TouchableOpacity>
+                                {/* <TouchableOpacity>
                                     <Image
                                         style={styles.img}
-                                        source={require('../../assets/check.png')}
+                                        source={require('../cozinha/assets copy/')}
 
                                     />
 
-                                </TouchableOpacity>
+                                </TouchableOpacity> */}
                             </View>
                         )
                     })

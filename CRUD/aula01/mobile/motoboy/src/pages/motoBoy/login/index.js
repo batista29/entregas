@@ -26,14 +26,17 @@ export default function Login({ navigation }) {
                 return res.json()
             })
             .then(data => {
-                console.log(data)
-                if (data[0].email !== undefined) {
-                    navigation.navigate("Entregas")
+                if (data.length > 0) {
+                    if (data[0].email !== undefined) {
+                        navigation.navigate("Entregas")
+                    }
                 } else {
                     alert('Erro')
                 }
             })
     }
+
+
     return (
         <View style={styles.main}>
             <View style={styles.container}>
@@ -63,14 +66,6 @@ export default function Login({ navigation }) {
                     }}
                 >
                     <Text style={styles.title}>ENTRAR</Text>
-                </TouchableOpacity>
-                <TouchableOpacity
-                    style={styles.button}
-                    onPress={() => {
-                        navigation.navigate("Cozinha")
-                    }}
-                >
-                    <Text style={styles.title}>COZINHA</Text>
                 </TouchableOpacity>
             </View>
         </View>
@@ -106,10 +101,6 @@ const styles = StyleSheet.create({
         color: "#fff",
     },
     button: {
-        backgroundColor: "#001B6B",
-    },
-    button2: {
-        marginTop: '10px',
         backgroundColor: "#001B6B",
     },
 });
