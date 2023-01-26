@@ -21,16 +21,13 @@
                     <p>Cliente:</p>
                     <p>Endereco:</p>
                     <p>Produto:</p>
-                    <button>Gerar Pedido</button>
+                    <button onclick=" gerarPedido()">Gerar Pedido</button>
                 </div>
                 <div class="infoPedido">
-                    <input type="text">
-                    <input type="text">
-                    <select name="" id="">
-                        <option value="">puddim</option>
-                        <option value="">marmita</option>
-                    </select>
-                    <input type="text">
+                    <input id="cliente" type="text">
+                    <input id="endereco" type="text">
+                    <input id="produto" type="text">
+                    <input id="data" type="datetime-local">
                 </div>
             </div>
             <section class="infoEntrega">
@@ -40,21 +37,19 @@
 
                     <div class="exe model">
                         <div class="teste">
-                            <div>
-                                <p id="exId">id:</p>
-                                <p id="exCli">cliente:</p>
-                                <p id="exProd">produto:</p>
-                                <p id="exEnd">endereco:</p>
-                                <p id="exData">data:</p>
-                                <p id="exHora">horario:</p>
-                            </div>
-                            <div>
-                                <button>
-                                    <img src="https://w7.pngwing.com/pngs/861/616/png-transparent-computer-icons-button-button-cdr-text-area-thumbnail.png"
-                                        alt="">
-                                    <p>Enviar Entrega</p>
-                                </button>
-                            </div>
+                            <p id="exId">id:</p>
+                            <p id="exCli">cliente:</p>
+                            <p id="exProd">produto:</p>
+                            <p id="exEnd">endereco:</p>
+                            <p id="exData">data:</p>
+                            <p id="exHora">horario:</p>
+                            <p class="model" id="exFunc">horario:</p>
+                            <button onclick=atualizarPedido(this)>
+                                <img src="https://w7.pngwing.com/pngs/861/616/png-transparent-computer-icons-button-button-cdr-text-area-thumbnail.png"
+                                    alt="">
+                                <p>Enviar Entrega</p>
+                            </button>
+
                         </div>
                     </div>
 
@@ -65,28 +60,35 @@
                     <h2>A caminho</h2>
                     <div class="cam model">
                         <div class="teste">
-                            <div>
-                                <p id="caId">id:</p>
-                                <p id="caCli">cliente:</p>
-                                <p id="caProd">produto:</p>
-                                <p id="caEnd">endereco:</p>
-                                <p id="caData">data:</p>
-                                <p id="caHora">horario:</p>
-                                <p id="caEnt">entrega:</p>
-                            </div>
-                            <div>
-                                <button>
-                                    <img src="https://i.pinimg.com/474x/94/dc/12/94dc122780d19b93deb9a3ec87e227bb.jpg"
-                                        alt="">
-                                    <p>Enviar Entrega</p>
-                                </button>
-                            </div>
+                            <p id="caId">id:</p>
+                            <p id="caCli">cliente:</p>
+                            <p id="caProd">produto:</p>
+                            <p id="caEnd">endereco:</p>
+                            <p id="caData">data:</p>
+                            <p id="caHora">horario:</p>
+                            <p id="caEnt">entrega:</p>
+                            <button onclick="finalizarEntrega(this)">
+                                <img src="https://i.pinimg.com/474x/94/dc/12/94dc122780d19b93deb9a3ec87e227bb.jpg"
+                                    alt="">
+                                <p>finalizar Entrega</p>
+                            </button>
                         </div>
-
                     </div>
                 </section>
             </section>
+            <section class="allPedidos">
+                <h2>Pedidos</h2>
+                <div class="itensPedido model">
+                    <p id="idCli">id:</p>
+                    <p id="CliNome">cliente:</p>
+                    <p id="Produto">produto:</p>
+                    <p id="Endereco">endereco:</p>
+                    <p id="Data">data:</p>
+                    <p id="Hora">horario:</p>
+                </div>
+            </section>
         </section>
+
     </main>
 </body>
 <script src="src/js/index.js"></script>

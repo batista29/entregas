@@ -19,4 +19,4 @@ module.exports = {
     toCreate,
     toUpdate,
     toDel
-};
+};  
