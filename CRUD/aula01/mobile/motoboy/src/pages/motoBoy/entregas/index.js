@@ -5,7 +5,7 @@ export default function Main() {
     const [posts, setPosts] = useState([])
 
     useEffect(() => {
-        fetch("http://10.87.207.35:3000/vw_pedidos2")
+        fetch("http://192.168.1.7:3000/vw_pedidos2")
             .then(res => { return res.json() })
             .then(data => {
                 setPosts(data)
@@ -28,6 +28,11 @@ export default function Main() {
                                 <Text style={styles.texto}>Endereço: {post.endereco}</Text>
                                 <Text style={styles.texto}>Data: {dataFormatadata}</Text>
                                 <Text style={styles.texto}>Horario: {post.hora_entrega}</Text>
+                                {/* <TouchableOpacity onPress={() =>{
+                                    enviarPedido(post.id_pedido)
+                                }}>
+                                    <Text>Oi</Text>
+                                </TouchableOpacity> */}
                             </View>
                         )
                     })
