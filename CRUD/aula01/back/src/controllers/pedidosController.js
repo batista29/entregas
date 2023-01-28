@@ -22,7 +22,7 @@ function cadastrarPedidos(req, res) {
 };
 
 
-function excluirCategoria (req, res) {
+function excluirPedido (req, res) {
     con.query(Pedidos.toDel(req.body), (err, result) => {
         if (err == null) {
             res.status(200).json(req.body).end();
@@ -32,21 +32,32 @@ function excluirCategoria (req, res) {
     });
 }
 
-function updatePublicacao (req, res) {
+function updatePedido (req, res) {
     con.query(Pedidos.toUpdate(req.body), (err, result) => {
-        if (err == null)
-            if (result.affectedRows > 0)
-                res.status(200).end();
-            else
-                res.status(404).end();
-        else
-            res.status(400).json(err).end();
-    });
-}
+        if (err == null) {
+            res.json(result).status(200).end();
+        } else {
+            res.status(500).end();
+        }
+    })
+};
+
+
+function updatePedidoMobile (req, res) {
+    con.query(Pedidos.toUpdateMobile(req.body), (err, result) => {
+        if (err == null) {
+            res.json(result).status(200).end();
+        } else {
+            res.status(500).end();
+        }
+    })
+};
+
 
 module.exports = {
     listarPedidos,
     cadastrarPedidos,
-    excluirCategoria,
-    updatePublicacao
+    excluirPedido,
+    updatePedido,
+    updatePedidoMobile
 }

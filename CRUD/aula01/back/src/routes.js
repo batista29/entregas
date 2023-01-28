@@ -11,8 +11,9 @@ const PedidosController = require("./controllers/pedidosController");
 
 router.get("/pedidos", PedidosController.listarPedidos);
 router.post("/pedidos", PedidosController.cadastrarPedidos);
-router.delete("/pedidos", PedidosController.excluirCategoria);
-router.put("/pedidos", PedidosController.updatePublicacao);
+router.delete("/pedidos", PedidosController.excluirPedido);
+router.put("/pedidos", PedidosController.updatePedido);
+router.put("/pedidos/mobile", PedidosController.updatePedidoMobile);
 
 const Execucao = require("./controllers/vw_execucaoController");
 
