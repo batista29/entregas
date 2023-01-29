@@ -17,7 +17,7 @@ export default function Cozinha() {
       id_pedido: id_pedido,
       hora_entrega: null
     }
-    fetch('http://192.168.1.7:3000/pedidos/mobile'
+    fetch('http://192.168.1.7:3000/pedidos/mobile/cozinha'
       , {
         "method": "PUT",
         headers: {
