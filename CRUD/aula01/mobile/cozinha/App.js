@@ -66,7 +66,7 @@ export default function Cozinha() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: 'rgba(191, 233, 246, 0.802)',
+    backgroundColor: '#a9a9a9',
     alignItems: 'center',
   },
   texto: {
@@ -78,7 +78,7 @@ const styles = StyleSheet.create({
   texto2: {
     marginBottom: 5,
     fontSize: 19,
-    color: 'green',
+    color: '#90ee90',
     fontFamily: 'Arial',
   },
   publi: {
@@ -86,7 +86,7 @@ const styles = StyleSheet.create({
     width: '370px',
     border: '1px solid white',
     marginTop: '30px',
-    backgroundColor: 'rgb(7, 2, 30)',
+    backgroundColor: 'rgb(7, 2, 0)',
     textAlign: 'center',
     justifyContent: 'center'
   },

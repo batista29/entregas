@@ -10,8 +10,12 @@ const toUpdate = (model) => {
     return `UPDATE pedidos SET cliente = '${model.cliente}',endereco ='${model.endereco}', produto = '${model.produto}', data ='${model.data}', hora_pedido = '${model.hora_pedido}', hora_entrega = '${model.hora_entrega}', hora_fim = '${model.hora_fim}',id_entregador = ${model.id_entregador} WHERE id_pedido = ${model.id_pedido};`
 }
 
-const toUpdateMobile = (model) => {
+const updatePedidoMobileCozinha = (model) => {
     return `UPDATE pedidos SET hora_entrega = curtime() WHERE id_pedido = ${model.id_pedido};`
+}
+
+const updatePedidoMobileMotoboy = (model) => {
+    return `UPDATE pedidos SET hora_fim = curtime() WHERE id_pedido = ${model.id_pedido};`
 }
 
 const toDel = (model) => {
@@ -22,6 +26,7 @@ module.exports = {
     toReadAll,
     toCreate,
     toUpdate,
-    toUpdateMobile,
+    updatePedidoMobileCozinha,
+    updatePedidoMobileMotoboy,
     toDel
 };  

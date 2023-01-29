@@ -2,7 +2,7 @@ const Pedidos = require("../models/vw_pedidos_entregador")
 const con = require("../dao/dao");
 
 function listarPedidos(req, res) {
-    con.query(Pedidos.toReadAll(req.body), (err, result) => {
+    con.query(Pedidos.toReadAll(req.params), (err, result) => {
         if (err == null) {
             res.json(result).status(200).end();
         } else {

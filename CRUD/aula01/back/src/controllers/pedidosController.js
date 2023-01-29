@@ -43,8 +43,8 @@ function updatePedido (req, res) {
 };
 
 
-function updatePedidoMobile (req, res) {
-    con.query(Pedidos.toUpdateMobile(req.body), (err, result) => {
+function updatePedidoMobileCozinha (req, res) {
+    con.query(Pedidos.updatePedidoMobileMotoboy(req.body), (err, result) => {
         if (err == null) {
             res.json(result).status(200).end();
         } else {
@@ -53,11 +53,21 @@ function updatePedidoMobile (req, res) {
     })
 };
 
+function updatePedidoMobileMotoboy (req, res) {
+    con.query(Pedidos.updatePedidoMobileMotoboy(req.body), (err, result) => {
+        if (err == null) {
+            res.json(result).status(200).end();
+        } else {
+            res.status(500).end();
+        }
+    })
+};
 
 module.exports = {
     listarPedidos,
     cadastrarPedidos,
     excluirPedido,
     updatePedido,
-    updatePedidoMobile
+    updatePedidoMobileCozinha,
+    updatePedidoMobileMotoboy
 }

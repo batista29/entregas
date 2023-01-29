@@ -1,5 +1,6 @@
 import { StyleSheet, TextInput, View, Image, Text, TouchableOpacity } from "react-native";
 import { useState } from 'react'
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export default function Login({ navigation }) {
 
@@ -28,6 +29,7 @@ export default function Login({ navigation }) {
             .then(data => {
                 if (data.length > 0) {
                     if (data[0].email !== undefined) {
+                        AsyncStorage.setItem('id', data[0].id_entregador)
                         navigation.navigate("Entregas")
                     }
                 } else {
