@@ -38,18 +38,6 @@ LINES TERMINATED BY '\r\n'
 IGNORE 1 ROWS;
 
 
-
-
-
--- drop view if exists vw_cozinha;
--- create view vw_cozinha AS 
--- SELECT p.id_pedido,p.cliente,p.produto,p.endereco,p.data, p.hora_pedido
--- FROM entregadores e INNER JOIN pedidos p on e.id_entregador = p.id_entregador;
-
-
-
-
-
 -- Listar pedidos em execução, com os campos hora_entrega e hora_fim em branco ou nulo ou hora 0:00 PEDIDOS EM EXECUCAO
 drop view if exists vw_execucao;
 create view vw_execucao AS 

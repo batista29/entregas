@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funcionario</title>
+    <link rel="stylesheet" href="../../src/css/all.css">
+    <link rel="stylesheet" href="../../src/css/funcionarios.css">
+</head>
+
+<body>
+    <header class="cabecalho">
+        <h1>Gestão de Funcionários</h1>
+    </header>
+    <main>
+        <section class="allFuncionarios">
+            <h2>Funcionarios</h2>
+            <button onclick="abrirModal()">+</button>
+            <section class="funcionario">
+                <div class="func model">
+                    <p class="idEntregador">id:</p>
+                    <p class="nomeEntregador">nome:</p>
+                    <p class="veiculo">veiculo:</p>
+                </div>
+            </section>
+        </section>
+        <a href="../../index.html">
+            <button><</button>
+        </a>
+        
+    </main>
+
+    <div class="modal-container model">
+        <div class="funcModal">
+            <button onclick="fecharModal()" class="fechar">X</button>
+            <form action="">
+                <button onclick="adicionarFuncionario()">Cadastrar Funcionário</button>
+                <label for="">nome:</label>
+                <input id="inpNomeFunc" type="text">
+                <label for="">email</label>
+                <input id="inpEmail" type="text">
+                <label for="">senha</label>
+                <input id="inpSenha" type="text">
+                <label for="">veiculo</label>
+                <input id="inpVeiculo" type="text">
+            </form>
+        </div>
+    </div>
+</body>
+<script src="../../src/js/funcionario.js"></script>
+
+</html>

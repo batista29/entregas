@@ -9,15 +9,12 @@ const cam = document.querySelector('.cam')
 
 function pedidosExecucao() {
 
-    const options = { method: 'GET' }
+    let options = { method: 'GET' }
 
     fetch(urlVwExec, options)
         .then(response => { return response.json() })
         .then(resp => {
             resp.forEach(element => {
-
-
-
 
                 var date = new Date(element.data)
                 var dataFormatadata = date.toLocaleDateString('pt-BR', { timeZone: 'UTC' });
@@ -40,7 +37,7 @@ function pedidosExecucao() {
 
 function pedidosCaminho() {
 
-    const options = { method: 'GET' }
+    let options = { method: 'GET' }
 
     fetch(urlVwPedidos, options)
         .then(response => { return response.json() })
@@ -93,15 +90,16 @@ function atualizarPedido(infoPedidos) {
         id_entregador: infoPedidos[6].innerHTML
     }
 
-    const options = {
+    let options = {
         method: 'PUT',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(dados)
     };
 
     fetch(urlPedidos, options)
-        .then(response => { return response.json() })
+        .then(response => console.log(response.json()))
         .then(res => {
+            alert('enviar pedido para entrega?')
             window.location.reload(true);
         })
 
@@ -167,7 +165,7 @@ const itensPedido = document.querySelector('.itensPedido')
 
 function listarAllPedidos() {
 
-    const options = { method: 'GET' };
+    let options = { method: 'GET' };
 
     fetch(urlPedidos, options)
         .then(response => response.json())
