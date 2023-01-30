@@ -20,6 +20,8 @@
             <button onclick="abrirModal()">+</button>
             <section class="funcionario">
                 <div class="func model">
+                    <button onclick="excluirFuncionarios(this)">x</button>
+                    <button onclick="abrirModalAtt(this)">att</button>
                     <p class="idEntregador">id:</p>
                     <p class="nomeEntregador">nome:</p>
                     <p class="veiculo">veiculo:</p>
@@ -27,9 +29,10 @@
             </section>
         </section>
         <a href="../../index.html">
-            <button><</button>
+            <button class="btnHome">
+                <</button>
         </a>
-        
+
     </main>
 
     <div class="modal-container model">
@@ -48,6 +51,24 @@
             </form>
         </div>
     </div>
+
+    <div class="attModal model">
+        <div class="attFuncModal">
+            <button onclick="fecharModalAtt()" class="fechar">X</button>
+            <form  action="">
+                <button onclick="atualizarFuncionario()">Atualizar Funcionário</button>
+                <label  for="">nome:</label>
+                <input id="attNomeFunc" type="text">
+                <label for="">email</label>
+                <input id="attEmail" type="text">
+                <label for="">senha</label>
+                <input id="attSenha" type="text">
+                <label for="">veiculo</label>
+                <input id="attVeiculo" type="text">
+            </form>
+        </div>
+    </div>
+
 </body>
 <script src="../../src/js/funcionario.js"></script>
 

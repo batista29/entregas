@@ -31,8 +31,30 @@ function loginUser (req, res) {
     })
 }
 
+function updateEntregador (req, res) {
+    con.query(Entregadores.toUpdate(req.body), (err, result) => {
+        if (err == null) {
+            res.json(result).status(200).end();
+        } else {
+            res.status(500).end();
+        }
+    })
+};
+
+function excluirEntregador (req, res) {
+    con.query(Entregadores.toDelete(req.body), (err, result) => {
+        if (err == null) {
+            res.status(200).json(req.body).end();
+        } else {
+            res.status(400).json(err).end();
+        }
+    });
+}
+
 module.exports = {
     listarEntregadores,
     cadastrarEntregadores,
-    loginUser
+    loginUser,
+    updateEntregador,
+    excluirEntregador
 }

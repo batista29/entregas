@@ -1,5 +1,5 @@
 const urlVwExec = 'http://localhost:3000/vwExecucao'
-const urlVwPedidos = 'http://localhost:3000/vw_pedidos2'
+const urlVwPedidos = 'http://localhost:3000/vw_pedidosCaminho'
 const urlPedidos = 'http://localhost:3000/pedidos'
 
 const execucao = document.querySelector('.execucao')
@@ -77,6 +77,7 @@ function atualizarPedido(infoPedidos) {
 
     var dataAtual = ano + '-' + mes + '-' + dia
 
+    console.log(dataAtual)
 
     let dados = {
         id_pedido: infoPedidos[0].innerHTML.split(':')[1],

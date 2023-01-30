@@ -21,7 +21,18 @@ function listarPedidos2(req, res) {
     })
 };
 
+function listarPedidosCaminho(req, res) {
+    con.query(Pedidos.toReadCaminho(), (err, result) => {
+        if (err == null) {
+            res.json(result).status(200).end();
+        } else {
+            res.status(500).end();
+        }
+    })
+};
+
 module.exports = {
     listarPedidos,
-    listarPedidos2
+    listarPedidos2,
+    listarPedidosCaminho
 }

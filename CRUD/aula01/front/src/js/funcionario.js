@@ -33,6 +33,24 @@ function fecharModal() {
     modal.classList.add("model");
 }
 
+function abrirModalAtt(info) {
+
+    info = info.parentNode.children[2].innerHTML.split(':')[1]
+
+    localStorage.setItem(
+        "infoFunc",
+        JSON.stringify({ id: info })
+    );
+
+    let modal = document.querySelector(".attModal");
+    modal.classList.remove("model");
+}
+
+function fecharModalAtt() {
+    let modal = document.querySelector(".attModal");
+    modal.classList.add("model");
+}
+
 function adicionarFuncionario() {
 
     let inpVeiculo = document.getElementById('inpVeiculo').value
@@ -64,8 +82,54 @@ function adicionarFuncionario() {
     }
 }
 
-function excluirFuncionarios(){
+function excluirFuncionarios(id_entregador) {
+
+    let dados = {
+        id_entregador: id_entregador.parentNode.children[2].innerHTML.split(':')[1]
+    }
+
+    const options = {
+        method: 'DELETE',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(dados)
+    };
+
+    fetch(urlFunc, options)
+        .then(response => response.json())
+        .then(resp => {
+            alert('excluir funcionario')
+            window.location.reload(true)
+        })
+}
+
+function atualizarFuncionario() {
+
+    let info = JSON.parse(localStorage.getItem("infoFunc"));
+
+    let attVeiculo = document.getElementById('inpVeiculo').value
+    let attNomeFunc = document.getElementById('inpNomeFunc').value
+    let attEmail = document.getElementById('inpEmail').value
+    let attSenha = document.getElementById('inpSenha').value
     
+    let dados = {
+        id_entregador:info.id,
+        nome:attNomeFunc,
+        email:attEmail,
+        senha:attSenha,
+        veiculo:attVeiculo
+    }
+
+    let options = {
+        method: 'PUT',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify(dados)
+      };
+
+      fetch(urlFunc, options)
+        .then(response => {return response.json()})
+        .then(resp => {
+            console.log(resp)
+        })
 }
 
 listarFuncionario()

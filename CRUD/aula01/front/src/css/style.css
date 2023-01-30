@@ -1,20 +1,3 @@
-body {
-    height: 100%;
-    background-color: rgb(229, 229, 229);
-}
-
-.cabecalho {
-    height: 10vh;
-    background-color: white;
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 90%;
-    margin: 10px auto;
-    border: 1px solid rgb(182, 182, 182);
-}
-
 .pedidos {
     height: 85vh;
     margin: auto;
@@ -22,7 +5,7 @@ body {
 }
 
 .gerarPedido {
-    height: 32%;
+    height: 50%;
     background-color: white;
     margin-bottom: 10px;
     border: 1px solid rgb(182, 182, 182);
@@ -167,4 +150,16 @@ select {
 
 .itensPedido p {
     margin: 10px;
+}
+
+.btnFunc { 
+    height: 30px;
+    border: none;
+    background-color: rgb(182, 182, 182);
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.btnFunc:hover { 
+   background-color: rgb(110, 110, 110);
 }

@@ -6,6 +6,8 @@ const EntregadoresController = require("./controllers/entregadoresController");
 router.get("/motoBoy", EntregadoresController.listarEntregadores);
 router.post("/motoBoy", EntregadoresController.cadastrarEntregadores);
 router.post("/motoBoy/login", EntregadoresController.loginUser);
+router.put("/motoBoy", EntregadoresController.updateEntregador)
+router.delete("/motoBoy",EntregadoresController.excluirEntregador)
 
 const PedidosController = require("./controllers/pedidosController");
 
@@ -24,5 +26,6 @@ const vw_Pedidos = require("./controllers/vw_pedidos_entregador");
 
 router.get("/vw_pedidos/:id_entregador", vw_Pedidos.listarPedidos);
 router.get("/vw_pedidos2", vw_Pedidos.listarPedidos2);
+router.get("/vw_pedidosCaminho", vw_Pedidos.listarPedidosCaminho);
 
 module.exports = router;
