@@ -5,7 +5,7 @@ export default function Cozinha() {
   const [posts, setPosts] = useState([])
 
   useEffect(() => {
-    fetch("http://192.168.1.7:3000/vw_pedidos2")
+    fetch("http://10.87.207.14:3000/vw_pedidos2")
       .then(res => { return res.json() })
       .then(data => {
         setPosts(data)
@@ -17,7 +17,7 @@ export default function Cozinha() {
       id_pedido: id_pedido,
       hora_entrega: null
     }
-    fetch('http://192.168.1.7:3000/pedidos/mobile/cozinha'
+    fetch('http://10.87.207.14:3000/pedidos/mobile/cozinha'
       , {
         "method": "PUT",
         headers: {

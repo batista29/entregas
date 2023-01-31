@@ -18,7 +18,7 @@ export default function Main() {
     if (lida.length == 0) getData();
 
     useEffect(() => {
-        fetch(`http://192.168.1.7:3000/vw_pedidos/${lida}`)
+        fetch(`http://10.87.207.14:3000/vw_pedidos/${lida}`)
             .then(res => { return res.json() })
             .then(data => {
                 setPosts(data)
@@ -30,7 +30,7 @@ export default function Main() {
             id_pedido: id_pedido,
             hora_fim: null
         }
-        fetch('http://192.168.1.7:3000/pedidos/mobile/motoboy'
+        fetch('http://10.87.207.14:3000/pedidos/mobile/motoboy'
             , {
                 "method": "PUT",
                 headers: {

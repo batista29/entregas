@@ -13,7 +13,7 @@ export default function Login({ navigation }) {
     }
 
     const userLogin = () => {
-        fetch("http://192.168.1.7:3000/motoBoy/login"
+        fetch("http://10.87.207.14:3000/motoBoy/login"
             , {
                 method: 'POST',
                 headers: {

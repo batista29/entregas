@@ -20,7 +20,7 @@ const updatePedidoMobileMotoboy = (model) => {
 
 const toDel = (model) => {
     return `DELETE FROM pedidos WHERE id_pedido = '${model.id_pedido}'`;
-  };
+};
 
 module.exports = {
     toReadAll,
