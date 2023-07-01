@@ -1,4 +1,4 @@
-# Projeto 1 (Entregas) Sistema Full Stack + mobile
+# Projeto (Entregas) Sistema Full Stack + mobile
 Requisitos:
 Gestão: Sistema Web (Front-End) com as funcionalidades:
 Cadastrar novo pedido
