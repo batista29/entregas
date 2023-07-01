@@ -12,10 +12,3 @@ Entregador: App (Mobile)
 Tela de login para entregador
 Listar as entregas
 Botão que ao ser clicado preenche a hora_fim e o pedido some da lista
-WireFrame com as três telas de exemplo:
-./wireframe/gestao.png
-./wireframe/cozinha.png
-./wireframe/entregador.png
-Dados de teste:
-./dados/entregadores.csv
-./dados/pedidos.csv
